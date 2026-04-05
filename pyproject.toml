@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyber-soc-analyst"
+version = "0.1.0"
+description = "A Blue Team environment for triaging SIEM alerts"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "openenv-core",
+    "pydantic",
+    "fastapi",
+    "uvicorn",
+    "openai",
+    "scalar-fastapi"
+]
