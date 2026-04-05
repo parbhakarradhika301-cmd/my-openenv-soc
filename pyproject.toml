@@ -16,3 +16,6 @@ dependencies = [
     "openai",
     "scalar-fastapi"
 ]
+
+[project.scripts]
+server = "server.app:main"
