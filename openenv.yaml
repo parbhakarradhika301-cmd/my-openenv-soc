@@ -1,0 +1,8 @@
+spec_version: "1.0"
+name: "cyber-soc-analyst"
+description: "A Blue Team environment for triaging SIEM alerts and mitigating APT malware."
+type: "typed-step"
+runtime: "docker"
+app:
+  port: 8000
+  command: ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
