@@ -112,8 +112,10 @@ class StepResponse(BaseModel):
     info: RewardInfo
 
 @app.post("/reset", response_model=Observation)
-def reset_env(req: ResetRequest):
+def reset_env(req: Optional[ResetRequest] = None):
     global env_instance
+    if req is None:
+        req = ResetRequest()
     env_instance = CyberSOCEnv(difficulty=req.difficulty, num_alerts=req.num_alerts)
     return env_instance.reset()
 
